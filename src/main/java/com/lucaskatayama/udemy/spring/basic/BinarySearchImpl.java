@@ -1,7 +1,8 @@
-package com.lucaskatayama.udemy.spring;
+package com.lucaskatayama.udemy.spring.basic;
 
-import com.lucaskatayama.udemy.spring.sorting.SortAlgorithm;
+import com.lucaskatayama.udemy.spring.basic.sorting.SortAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -12,11 +13,9 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
-    SortAlgorithm sort;
+    @Qualifier("quick")
+    private SortAlgorithm sort;
 
-    public BinarySearchImpl(SortAlgorithm sort) {
-        this.sort = sort;
-    }
 
     public int search(int[] ints, int i) {
         int[] sorted = this.sort.sort(ints);

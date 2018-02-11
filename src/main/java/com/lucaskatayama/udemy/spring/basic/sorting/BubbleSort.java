@@ -1,4 +1,4 @@
-package com.lucaskatayama.udemy.spring.sorting;
+package com.lucaskatayama.udemy.spring.basic.sorting;
 
 
 import org.springframework.stereotype.Component;

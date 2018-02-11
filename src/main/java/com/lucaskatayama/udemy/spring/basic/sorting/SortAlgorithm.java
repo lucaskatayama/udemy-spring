@@ -1,4 +1,4 @@
-package com.lucaskatayama.udemy.spring.sorting;
+package com.lucaskatayama.udemy.spring.basic.sorting;
 
 public interface SortAlgorithm {
     int[] sort(int[] ints);

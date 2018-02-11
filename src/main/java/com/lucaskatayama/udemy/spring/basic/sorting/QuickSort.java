@@ -1,10 +1,10 @@
-package com.lucaskatayama.udemy.spring.sorting;
+package com.lucaskatayama.udemy.spring.basic.sorting;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+@Qualifier("quick")
 public class QuickSort implements SortAlgorithm {
     @Override
     public int[] sort(int[] ints) {
